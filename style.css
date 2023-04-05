@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: arial;
+}
+html,
+body {
+  overflow: hidden;
+}
+.main {
+  width: 100%;
+  height: 100vh;
+  background: #111121;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  margin-top: 5%;
+  padding: 30px 30px;
+  flex-wrap: wrap;
+  box-shadow: 1px 1px 10px #000;
+}
+.image img {
+  width: 100%;
+  max-width: 150px;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: 25px;
+}
+.wrapper .title {
+  text-align: center;
+}
+.wrapper .title .text {
+  margin-bottom: 10px;
+}
+.wrapper .title .name {
+  font-size: 30px;
+}
+.wrapper .title .subject {
+  font-size: 20px;
+}
+
+.dropbtn {
+  background-color: #4caf50;
+  color: white;
+  padding: 13px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.dropdown-content {
+  display: none;
+
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  animation-name: dropdown-animation;
+  animation-duration: 0.5s;
+}
+
+@keyframes dropdown-animation {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: #111121;
+}
+
+.dropdown {
+  text-align: center;
+  display: inline-block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+@media only screen and (max-width: 480px) {
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+  }
+  .container .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10%;
+  }
+}
